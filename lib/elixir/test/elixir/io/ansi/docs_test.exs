@@ -551,7 +551,10 @@ defmodule IO.ANSI.DocsTest do
     end
 
     test "table with escaped \"|\" inside cell" do
-      table = "a | smth\\|smth_else | c\nd | e | f"
+      table = """
+      a | smth\\|smth_else | c
+      d | e                | f
+      """
 
       expected =
         """
